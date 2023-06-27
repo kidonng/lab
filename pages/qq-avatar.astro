@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/base.astro'
+import {QqAvatar} from '../components/pages/qq-avatar.jsx'
+
+export const title = 'QQ Avatar'
+---
+
+<Base title={title} description="Get plain & encrypted QQ avatar URL">
+	<QqAvatar client:load />
+</Base>

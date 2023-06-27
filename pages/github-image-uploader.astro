@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/base.astro'
+import {GitHubImageUploader} from '../components/pages/github-image-uploader.jsx'
+
+export const title = 'GitHub Image Uploader'
+---
+
+<Base title={title} description="Find the uploader of a GitHub image">
+	<GitHubImageUploader client:load />
+</Base>

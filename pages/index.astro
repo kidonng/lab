@@ -1,0 +1,20 @@
+---
+import type {AstroInstance} from 'astro'
+import Base from '../layouts/base.astro'
+
+const pages = (await Astro.glob('./**/*.astro')) as (AstroInstance & {
+	title: string
+})[]
+---
+
+<Base title="Lab" description="Where ideas brew">
+	<ul>
+		{
+			pages.map(page => (
+				<li>
+					<a href={page.url}>{page.title}</a>
+				</li>
+			))
+		}
+	</ul>
+</Base>

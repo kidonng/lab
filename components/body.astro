@@ -1,0 +1,13 @@
+---
+export type Props = {
+	class?: string | string[]
+}
+
+const {class: className} = Astro.props
+---
+
+<body>
+	<div class:list={['p-8 max-w-2xl mx-auto', className]}>
+		<slot />
+	</div>
+</body>

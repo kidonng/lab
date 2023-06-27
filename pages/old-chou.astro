@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/base.astro'
+import {OldChou} from '../components/pages/old-chou.jsx'
+
+export const title = 'Old Chou'
+---
+
+<Base
+	title={title}
+	description="Simple board for Old Chou's treasure hunt game in Genshin Impact"
+>
+	<OldChou client:load />
+</Base>

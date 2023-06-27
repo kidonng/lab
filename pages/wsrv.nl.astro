@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/base.astro'
+import {WsrvNl} from '../components/pages/wsrv.nl.jsx'
+
+export const title = 'wsrv.nl'
+---
+
+<Base title={title} description="Interactive wsrv.nl builder">
+	<WsrvNl client:load />
+</Base>

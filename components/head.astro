@@ -1,0 +1,21 @@
+---
+export type Props = {
+	title: string
+	description: string
+}
+
+const {title, description} = Astro.props
+---
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="color-scheme" content="light dark" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={title} />
+	<meta property="og:url" content={Astro.url.href} />
+	<link rel="icon" href="/favicon.png" />
+	<slot />
+</head>

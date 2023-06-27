@@ -1,0 +1,24 @@
+---
+import Head, {type Props as HeadProps} from '../components/head.astro'
+import Body, {type Props as BodyProps} from '../components/body.astro'
+
+type Props = HeadProps & BodyProps
+
+const {title, description, class: className = ''} = Astro.props
+---
+
+<html lang="en">
+	<Head title={title} description={description} />
+	<Body
+		class={[
+			'prose',
+			...(Array.isArray(className) ? className : [className]),
+		]}
+	>
+		<main>
+			<h1 class="mt-0 text-2xl">{title}</h1>
+			<p class="pl-4 border-l-4">{description}</p>
+			<slot />
+		</main>
+	</Body>
+</html>

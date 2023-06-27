@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+	"semicolon": false,
+	"extends": ["xo-react"],
+	"rules": {
+		"n/file-extension-in-import": "off",
+		"jsx-quotes": ["error", "prefer-double"],
+		"react/react-in-jsx-scope": "off",
+		"react/no-unknown-property": ["error", {"ignore": ["class"]}]
+	},
+	"ignores": ["env.d.ts"]
+}

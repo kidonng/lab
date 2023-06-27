@@ -1,0 +1,17 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"headers": [
+		{
+			"source": "/_astro/(.*)",
+			"headers": [
+				{
+					"key": "cache-control",
+					"value": "public, max-age=31536000, immutable"
+				}
+			]
+		}
+	],
+	"github": {
+		"silent": true
+	}
+}
